@@ -1,0 +1,11 @@
+---
+- name: Create partitions on the disk
+  parted:
+    device: "{{ disk }}"
+    number: "{{ item.index }}"
+    state: present
+    part_start: "{{ item.start }}"
+    part_end: "{{ item.end }}"
+  loop:
+    - { index: 1, start: "0%", end: "50GB" }
+    - { index: 2, start: "50GB", end: "80GB" }

@@ -1,0 +1,9 @@
+---
+disk: /dev/xvdc
+partitions:
+  - name: 1
+    size: 50GB
+    mountpoint: /homelv
+  - name: 2
+    size: 30GB
+    mountpoint: /usrlv

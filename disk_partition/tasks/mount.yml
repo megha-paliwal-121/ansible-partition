@@ -1,0 +1,8 @@
+---
+- name: Mount partitions
+  mount:
+    path: "{{ item.mountpoint }}"
+    src: "{{ disk }}{{ item.name }}"
+    fstype: ext4
+    state: mounted
+  loop: "{{ partitions }}"

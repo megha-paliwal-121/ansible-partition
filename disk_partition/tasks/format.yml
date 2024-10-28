@@ -1,0 +1,8 @@
+---
+- name: Format partitions with ext4
+  filesystem:
+    fstype: ext4
+    dev: "{{ disk }}{{ item.index }}"
+  loop:
+    - { index: 1 }
+    - { index: 2 }

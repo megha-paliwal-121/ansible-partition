@@ -1,0 +1,4 @@
+---
+- import_tasks: partition.yml
+- import_tasks: format.yml
+- import_tasks: mount.yml
